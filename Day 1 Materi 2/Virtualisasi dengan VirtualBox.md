@@ -1,5 +1,5 @@
 Modul ini membahas konsep dan implementasi virtualisasi menggunakan Oracle VirtualBox. Untuk memperkuat pemahaman teoretis melalui pengalaman praktis, modul ini dilengkapi dengan sesi *hands-on* yang memandu pengguna dalam menerapkan materi secara langsung.
-\# Prerequisites
+# Prerequisites
 - VirtualBox Installer:
 Windows: [Direct Download](https://download.virtualbox.org/virtualbox/7.2.6/VirtualBox-7.2.6a-172322-Win.exe)
 Linux: [Download Page](https://www.virtualbox.org/wiki/Linux_Downloads)
