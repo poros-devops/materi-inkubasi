@@ -24,9 +24,9 @@ VirtualBox mendukung berbagai sistem operasi, termasuk Windows dan Linux. Beriku
 VirtualBox menyediakan installer berbasis antarmuka grafis (GUI) untuk sistem operasi Windows, sehingga proses instalasi dapat dilakukan dengan mudah.
 
 Langkah instalasi:
-1. **Unduh Installer**
+1. **Unduh Installer**  
 Unduh installer VirtualBox dari halaman resmi: [Direct Download](https://download.virtualbox.org/virtualbox/7.2.6/VirtualBox-7.2.6a-172322-Win.exe)
-2. **Jalankan Installer**
+2. **Jalankan Installer**  
 Setelah proses pengunduhan selesai, klik dua kali file installer untuk memulai installation wizard. Anda dapat menggunakan konfigurasi default untuk instalasi standar.
 <img
 src="Virtualisasi%20dengan%20VirtualBox-media/a149f91b010881cd092356d1196b3f3eb5199ca6.png"
@@ -43,7 +43,7 @@ class="wikilink" alt="Pastedimage20260301093618.png" />
 <img
 src="Virtualisasi%20dengan%20VirtualBox-media/3c875ba7d1321bc96ec2d2973740a2e8d6e6edb9.png"
 class="wikilink" alt="Pastedimage20260301093632.png" />
-3. **Verifikasi Instalasi**
+3. **Verifikasi Instalasi**  
 Setelah instalasi selesai, jalankan aplikasi VirtualBox untuk memverifikasi bahwa instalasi telah berhasil dilakukan.
 <img
 src="Virtualisasi%20dengan%20VirtualBox-media/38643d9413a730e3a4afc23ec35405cb5b62e5e3.png"
@@ -53,11 +53,11 @@ class="wikilink" alt="Pastedimage20260301093641.png" />
 
 VirtualBox mendukung dua metode instalasi pada sistem operasi Linux, yaitu melalui *command line* dan melalui *software package*. Pada modul ini, metode yang digunakan adalah instalasi melalui *software package*. Berikut adalah langkah-langkahnya:
 
-1.  **Unduh Software Package**
+1.  **Unduh Software Package**  
     Unduh *software package* yang sesuai dengan distribusi Linux yang Anda gunakan melalui tautan berikut: [Download Page](https://www.virtualbox.org/wiki/Linux_Downloads)<img
     src="Virtualisasi%20dengan%20VirtualBox-media/087d2218adb7a54e9a075aba87f87aeb01ae0981.png"
     class="wikilink" alt="Pastedimage20260228223644.png" />
-2.  **Jalankan GUI Installer**
+2.  **Jalankan GUI Installer**  
     Setelah proses pengunduhan selesai, jalankan *installer* dengan mengeklik berkas *software package* tersebut (umumnya tersimpan di folder **Downloads**).<img
     src="Virtualisasi%20dengan%20VirtualBox-media/a19f0e60c78bcab00d8c88f6b4ba0449de91c180.png"
     class="wikilink" alt="Pastedimage20260228165725.png" />
@@ -66,7 +66,7 @@ VirtualBox mendukung dua metode instalasi pada sistem operasi Linux, yaitu melal
     class="wikilink" alt="Pastedimage20260228165620.png" />Tunggu hingga proses pemasangan selesai sepenuhnya.<img
     src="Virtualisasi%20dengan%20VirtualBox-media/527ca7102000d6e1f971ac7b0920c5c3656324a4.png"
     class="wikilink" alt="Pastedimage20260228224312.png" />
-3.  **Verifikasi Instalasi**
+3.  **Verifikasi Instalasi**  
     Setelah proses instalasi selesai, jalankan aplikasi VirtualBox untuk memastikan bahwa instalasi telah berhasil dilakukan.<img
     src="Virtualisasi%20dengan%20VirtualBox-media/9c5155a7b0197a0d5bedc2bd75325b59e5735cc0.png"
     class="wikilink" alt="Pastedimage20260228224728.png" />
@@ -79,23 +79,23 @@ VirtualBox mendukung berbagai operasi dasar untuk manajemen *Virtual Machine* (V
 
 Berikut adalah langkah-langkah untuk membuat *Virtual Machine* baru pada VirtualBox.
 
-1.  **Buka Menu "New"**
+1.  **Buka Menu "New"**  
     Klik tombol **New** yang terletak di bagian kanan atas antarmuka VirtualBox untuk membuka menu konfigurasi VM baru.<img
     src="Virtualisasi%20dengan%20VirtualBox-media/87de9a71926d76cc9939d3a797019bc31149c51a.png"
     class="wikilink" alt="Pastedimage20260228225506.png" />
-2.  **Konfigurasi Awal**
+2.  **Konfigurasi Awal**  
     Pada tahap ini, tentukan nama VM, pilih file ISO sistem operasi yang akan digunakan, serta sesuaikan pengaturan awal lainnya sesuai kebutuhan.<img
     src="Virtualisasi%20dengan%20VirtualBox-media/8729068d58a9188dd7f361a2f9bf13ce19553026.png"
     class="wikilink" alt="Pastedimage20260228231500.png" />
-3.  **Konfigurasi Hardware**
+3.  **Konfigurasi Hardware**  
     Tentukan alokasi sumber daya perangkat keras (*hardware*) yang akan digunakan oleh VM, seperti RAM dan CPU. Untuk keperluan dasar, nilai alokasi *default* yang tersedia sudah mencukupi.<img
     src="Virtualisasi%20dengan%20VirtualBox-media/fba70783862f59d34cfe1a7237a11e7c94a20e6e.png"
     class="wikilink" alt="Pastedimage20260228230833.png" />
-4.  **Review Konfigurasi**
+4.  **Review Konfigurasi**  
     Periksa kembali seluruh konfigurasi VM yang telah ditentukan. Apabila semua pengaturan sudah sesuai, klik tombol **Next** untuk melanjutkan ke proses instalasi.<img
     src="Virtualisasi%20dengan%20VirtualBox-media/22fe226be9a694aa92e048fb0d9b91c0d1e9af9a.png"
     class="wikilink" alt="Pastedimage20260228231820.png" />
-5.  **Jalankan Virtual Machine**
+5.  **Jalankan Virtual Machine**  
     Pada tahap ini, *Virtual Machine* telah berhasil dibuat dan siap dijalankan. Perlu diperhatikan bahwa umumnya masih terdapat tahap lanjutan berupa instalasi sistem operasi di dalam VM tersebut.<img
     src="Virtualisasi%20dengan%20VirtualBox-media/a133c78c368678c8c1ab305d46a578250157b93f.png"
     class="wikilink" alt="Pastedimage20260301003716.png" />
@@ -140,15 +140,15 @@ Apabila Anda telah yakin dengan pilihan tersebut, klik tombol **Remove** untuk m
 
 ### Membuat Snapshot
 
-1.  **Pilih VM**
+1.  **Pilih VM**  
     Pilih VM yang ingin Anda ambil snapshot-nya.<img
     src="Virtualisasi%20dengan%20VirtualBox-media/79485e13263d038c6f4a47b05ba656e6cec8e189.png"
     class="wikilink" alt="Pastedimage20260301090916.png" />
-2.  **Klik Tab Snapshots**
+2.  **Klik Tab Snapshots**  
     Klik tab **Snapshots** untuk masuk ke menu snapshot.<img
     src="Virtualisasi%20dengan%20VirtualBox-media/a42f05444695858c502aa2c5e57ac0bed75ac0c4.png"
     class="wikilink" alt="Pastedimage20260301090726.png" />
-3.  **Pilih Take**
+3.  **Pilih Take**  
     Klik tombol **Take** (kanan atas) untuk mengambil snapshot pada kondisi saat ini.<img
     src="Virtualisasi%20dengan%20VirtualBox-media/b4606b1633b3318137e85b4ba6b13d03ce8efdab.png"
     class="wikilink" alt="Pastedimage20260301090802.png" />
@@ -183,9 +183,9 @@ VirtualBox mendukung berbagai sistem operasi, termasuk Windows dan Linux. Beriku
 VirtualBox menyediakan installer berbasis antarmuka grafis (GUI) untuk sistem operasi Windows, sehingga proses instalasi dapat dilakukan dengan mudah.
 
 Langkah instalasi:
-1. **Unduh Installer**
+1. **Unduh Installer**  
 Unduh installer VirtualBox dari halaman resmi: https://download.virtualbox.org/virtualbox/7.2.6/VirtualBox-7.2.6a-172322-Win.exe
-2. **Jalankan Installer**
+2. **Jalankan Installer**  
 Setelah proses pengunduhan selesai, klik dua kali file installer untuk memulai installation wizard. Anda dapat menggunakan konfigurasi default untuk instalasi standar.
 <img
 src="Virtualisasi%20dengan%20VirtualBox-media/a149f91b010881cd092356d1196b3f3eb5199ca6.png"
@@ -202,7 +202,7 @@ class="wikilink" alt="Pastedimage20260301093618.png" />
 <img
 src="Virtualisasi%20dengan%20VirtualBox-media/3c875ba7d1321bc96ec2d2973740a2e8d6e6edb9.png"
 class="wikilink" alt="Pastedimage20260301093632.png" />
-3. **Verifikasi Instalasi**
+3. **Verifikasi Instalasi**  
 Setelah instalasi selesai, jalankan aplikasi VirtualBox untuk memverifikasi bahwa instalasi telah berhasil dilakukan.
 <img
 src="Virtualisasi%20dengan%20VirtualBox-media/38643d9413a730e3a4afc23ec35405cb5b62e5e3.png"
@@ -212,11 +212,11 @@ class="wikilink" alt="Pastedimage20260301093641.png" />
 
 VirtualBox mendukung dua metode instalasi pada sistem operasi Linux, yaitu melalui *command line* dan melalui *software package*. Pada modul ini, metode yang digunakan adalah instalasi melalui *software package*. Berikut adalah langkah-langkahnya:
 
-1.  **Unduh Software Package**
+1.  **Unduh Software Package**  
     Unduh *software package* yang sesuai dengan distribusi Linux yang Anda gunakan melalui tautan berikut: <https://www.virtualbox.org/wiki/Linux_Downloads><img
     src="Virtualisasi%20dengan%20VirtualBox-media/087d2218adb7a54e9a075aba87f87aeb01ae0981.png"
     class="wikilink" alt="Pastedimage20260228223644.png" />
-2.  **Jalankan GUI Installer**
+2.  **Jalankan GUI Installer**  
     Setelah proses pengunduhan selesai, jalankan *installer* dengan mengeklik berkas *software package* tersebut (umumnya tersimpan di folder **Downloads**).<img
     src="Virtualisasi%20dengan%20VirtualBox-media/a19f0e60c78bcab00d8c88f6b4ba0449de91c180.png"
     class="wikilink" alt="Pastedimage20260228165725.png" />
@@ -225,7 +225,7 @@ VirtualBox mendukung dua metode instalasi pada sistem operasi Linux, yaitu melal
     class="wikilink" alt="Pastedimage20260228165620.png" />Tunggu hingga proses pemasangan selesai sepenuhnya.<img
     src="Virtualisasi%20dengan%20VirtualBox-media/527ca7102000d6e1f971ac7b0920c5c3656324a4.png"
     class="wikilink" alt="Pastedimage20260228224312.png" />
-3.  **Verifikasi Instalasi**
+3.  **Verifikasi Instalasi**  
     Setelah proses instalasi selesai, jalankan aplikasi VirtualBox untuk memastikan bahwa instalasi telah berhasil dilakukan.<img
     src="Virtualisasi%20dengan%20VirtualBox-media/9c5155a7b0197a0d5bedc2bd75325b59e5735cc0.png"
     class="wikilink" alt="Pastedimage20260228224728.png" />
@@ -238,32 +238,32 @@ Pada sesi praktik ini, Anda akan membuat sebuah mesin virtual (VM) Ubuntu Server
 
 Langkah awal yang perlu dilakukan adalah membuat Virtual Machine baru di VirtualBox.
 
-1.  **Buka Menu 'New'**
+1.  **Buka Menu 'New'**  
     Akses menu konfigurasi VM baru dengan mengklik tombol **New** yang terletak di bagian kanan atas antarmuka VirtualBox.<img
     src="Virtualisasi%20dengan%20VirtualBox-media/87de9a71926d76cc9939d3a797019bc31149c51a.png"
     class="wikilink" alt="Pastedimage20260228225506.png" />
 
-2.  **Konfigurasi Awal**
+2.  **Konfigurasi Awal**  
     Pada tahap ini, tentukan nama VM, pilih berkas ISO sistem operasi yang akan digunakan, serta sesuaikan pengaturan awal lainnya sesuai kebutuhan. Untuk modul ini, gunakan ISO Ubuntu Server yang dapat diunduh melalui [halaman resmi Ubuntu](https://ubuntu.com/download/server).<img
     src="Virtualisasi%20dengan%20VirtualBox-media/9ab6ff86321f1891ae80cb35ea143a052b071b9e.png"
     class="wikilink" alt="Pastedimage20260302162007.png" />
 
-3.  **Konfigurasi Perangkat Keras**
+3.  **Konfigurasi Perangkat Keras**  
     Alokasikan sumber daya perangkat keras (CPU, RAM, dan penyimpanan) untuk VM yang akan dibuat. Untuk keperluan praktik ini, konfigurasi bawaan (*default*) sudah mencukupi.<img
     src="Virtualisasi%20dengan%20VirtualBox-media/f2da6a818ce11ce9622a189534b277ccdbf0841b.png"
     class="wikilink" alt="Pastedimage20260302162040.png" />
 
-4.  **Tinjauan Konfigurasi**
+4.  **Tinjauan Konfigurasi**  
     Periksa kembali seluruh pengaturan VM yang telah Anda tentukan. Apabila seluruh konfigurasi telah sesuai, klik tombol **Next** untuk melanjutkan ke proses pembuatan VM.<img
     src="Virtualisasi%20dengan%20VirtualBox-media/50062c91c7bdabc00d334e981eb6b77c4619a7d9.png"
     class="wikilink" alt="Pastedimage20260302162056.png" />
 
-5.  **Jalankan Virtual Machine**
+5.  **Jalankan Virtual Machine**  
     Pada tahap ini, Virtual Machine telah berhasil dibuat. Namun, proses instalasi sistem operasi pada VM tersebut masih perlu dilakukan.<img
     src="Virtualisasi%20dengan%20VirtualBox-media/a133c78c368678c8c1ab305d46a578250157b93f.png"
     class="wikilink" alt="Pastedimage20260301003716.png" />
 
-6.  **Akses Live Server**
+6.  **Akses Live Server**  
     Untuk memulai instalasi, pilih entri **"Try or Install Ubuntu Server"** pada menu boot.<img
     src="Virtualisasi%20dengan%20VirtualBox-media/3d81971cce69003201ac24d6a344c1bb7e9e3716.png"
     class="wikilink" alt="Pastedimage20260302162151.png" />
@@ -273,14 +273,14 @@ Langkah awal yang perlu dilakukan adalah membuat Virtual Machine baru di Virtual
 
 Setelah VM berhasil dibuat, langkah berikutnya adalah melakukan instalasi sistem operasi Ubuntu Server.
 
-1.  **Konfigurasi Bahasa dan Tata Letak Keyboard**
+1.  **Konfigurasi Bahasa dan Tata Letak Keyboard**  
     Pilih bahasa dan tata letak keyboard yang ingin digunakan selama instalasi.<img
     src="Virtualisasi%20dengan%20VirtualBox-media/a0db3b4ba3fe72ed3dbfc75b6656daf0e933f66a.png"
     class="wikilink" alt="Pastedimage20260302162316.png" /><img
     src="Virtualisasi%20dengan%20VirtualBox-media/759dba1d6a2e2e6bccfac8157166866eaaa6740b.png"
     class="wikilink" alt="Pastedimage20260302162534.png" /> Anda dapat menyesuaikan pilihan ini sesuai preferensi. Namun, untuk konsistensi sesi praktik ini, disarankan menggunakan konfigurasi bawaan (Bahasa: English, Keyboard: English (US)).
 
-2.  **Pilih Tipe Instalasi**
+2.  **Pilih Tipe Instalasi**  
     Layar ini menyediakan opsi tipe instalasi Ubuntu Server. Pada sesi ini, gunakan konfigurasi bawaan tanpa modifikasi.<img
     src="Virtualisasi%20dengan%20VirtualBox-media/e0fc93da86568d2c2c7204ab933222360ff8b5b4.png"
     class="wikilink" alt="Pastedimage20260302162557.png" />
@@ -288,7 +288,7 @@ Setelah VM berhasil dibuat, langkah berikutnya adalah melakukan instalasi sistem
     \> - **Ubuntu Server**: Versi standar dengan paket tambahan yang memudahkan pengelolaan sistem.
     \> - **Ubuntu Server (Minimized)**: Versi minimal yang hanya menginstal paket inti untuk mengoptimalkan penggunaan sumber daya.
 
-3.  **Konfigurasi Jaringan**
+3.  **Konfigurasi Jaringan**  
     Konfigurasikan antarmuka jaringan yang akan digunakan oleh sistem. Untuk sesi praktik ini, gunakan konfigurasi bawaan.<img
     src="Virtualisasi%20dengan%20VirtualBox-media/15133b042b6f4de322e033629e90b631f99c46a2.png"
     class="wikilink" alt="Pastedimage20260302162624.png" />
@@ -297,42 +297,42 @@ Setelah VM berhasil dibuat, langkah berikutnya adalah melakukan instalasi sistem
     src="Virtualisasi%20dengan%20VirtualBox-media/af726fd917678d93b1946dc8ded3029e20d11875.png"
     class="wikilink" alt="Pastedimage20260302162647.png" />
 
-4.  **Pilih Archive Mirror**
+4.  **Pilih Archive Mirror**  
     Pilih *mirror* server arsip yang akan digunakan untuk mengunduh paket selama instalasi. Gunakan konfigurasi bawaan untuk saat ini.<img
     src="Virtualisasi%20dengan%20VirtualBox-media/fd9db3bf10efc0b3742a3ad03a219244a4dc18ba.png"
     class="wikilink" alt="Pastedimage20260302162928.png" />
 
-5.  **Konfigurasi Penyimpanan**
+5.  **Konfigurasi Penyimpanan**  
     Pada tahap konfigurasi penyimpanan, pilih opsi **"Use an entire disk"** yang telah terpilih secara bawaan. Opsi ini akan menghapus seluruh partisi pada disk virtual.<img
     src="Virtualisasi%20dengan%20VirtualBox-media/dec5b338d77dce34b66bb3c1deb311985484c2de.png"
     class="wikilink" alt="Pastedimage20260302163109.png" />
     \> **Peringatan:** Proses ini hanya memengaruhi disk virtual di dalam VM dan tidak akan berdampak pada data di komputer host Anda.
 
-6.  **Tinjauan Instalasi**
+6.  **Tinjauan Instalasi**  
     Tinjau kembali seluruh konfigurasi instalasi yang telah ditetapkan. Apabila seluruh pengaturan telah sesuai, konfirmasi untuk memulai proses instalasi.<img
     src="Virtualisasi%20dengan%20VirtualBox-media/e302e21294b4294630e2f0eb4f2df8ba3b03ce2e.png"
     class="wikilink" alt="Pastedimage20260302163132.png" /><img
     src="Virtualisasi%20dengan%20VirtualBox-media/ea5ce8f444234f478f35f9b0fda8b026ba0a8656.png"
     class="wikilink" alt="Pastedimage20260302163204.png" />
 
-7.  **Konfigurasi Akun Pengguna**
+7.  **Konfigurasi Akun Pengguna**  
     Pada layar ini, lakukan konfigurasi nama server (*hostname*), nama pengguna (*username*), dan kata sandi (*password*). Isi sesuai dengan preferensi Anda.<img
     src="Virtualisasi%20dengan%20VirtualBox-media/d2b984a2319fd1523b91a0648aa76514b5d7f704.png"
     class="wikilink" alt="Pastedimage20260302163333.png" />
 
-8.  **Ubuntu Pro**
+8.  **Ubuntu Pro**  
     Layar ini menawarkan opsi untuk mengaktifkan langganan Ubuntu Pro. Untuk keperluan praktik ini, pilih **"Skip for now"**.<img
     src="Virtualisasi%20dengan%20VirtualBox-media/a5d697602419d946bdecc32a59d1f0a1a011ee9c.png"
     class="wikilink" alt="Pastedimage20260302163347.png" />
 
-9.  **Konfigurasi Tambahan**
+9.  **Konfigurasi Tambahan**  
     Anda dapat melakukan konfigurasi tambahan seperti instalasi paket SSH atau snap. Untuk sesi ini, lewati tahap ini dan lanjutkan ke proses instalasi.<img
     src="Virtualisasi%20dengan%20VirtualBox-media/1488ab67904dbe86b15c70d7d20e839e8843c4ec.png"
     class="wikilink" alt="Pastedimage20260302163416.png" /><img
     src="Virtualisasi%20dengan%20VirtualBox-media/dbb199b73da41e95bb46cf18272f1d6f6673e7fc.png"
     class="wikilink" alt="Pastedimage20260302163450.png" />
 
-10. **Tunggu Proses Instalasi**
+10. **Tunggu Proses Instalasi**  
     Biarkan proses instalasi berjalan hingga selesai. Setelah instalasi rampung, sistem akan meminta Anda untuk melakukan *reboot*.<img
     src="Virtualisasi%20dengan%20VirtualBox-media/5763997eaf74cc77654417c3279fb034bde96a30.png"
     class="wikilink" alt="Pastedimage20260302163504.png" /><img
@@ -342,7 +342,7 @@ Setelah VM berhasil dibuat, langkah berikutnya adalah melakukan instalasi sistem
     src="Virtualisasi%20dengan%20VirtualBox-media/b30f564f7537155f4b3698c8aeab60b5fb4c88ec.png"
     class="wikilink" alt="Pastedimage20260302164824.png" />
 
-11. **Instalasi Selesai**
+11. **Instalasi Selesai**  
     Setelah *reboot*, jika sistem tampak terhenti pada layar hitam, tekan tombol **Enter** untuk melanjutkan ke *prompt* login.<img
     src="Virtualisasi%20dengan%20VirtualBox-media/d49c6812cddd587ecc4699e3cf16aea7b9788779.png"
     class="wikilink" alt="Pastedimage20260302165025.png" />

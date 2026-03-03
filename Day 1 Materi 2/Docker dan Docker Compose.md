@@ -19,112 +19,112 @@ Docker berperan penting dalam industri teknologi modern. Prinsip *"build once, r
 
 Docker memiliki dukungan resmi untuk instalasi pada Ubuntu. Berikut adalah langkah-langkah yang dapat Anda lakukan:
 
-1.  **Hapus Instalasi Docker Sebelumnya**
+1.  **Hapus Instalasi Docker Sebelumnya**  
     Langkah ini dilakukan untuk menghapus package Docker lain yang mungkin dapat menyebabkan konflik.
 
-``` bash
-sudo apt remove $(dpkg --get-selections docker.io docker-compose docker-compose-v2 docker-doc podman-docker containerd runc | cut -f1)
-```
+    ``` bash
+    sudo apt remove $(dpkg --get-selections docker.io docker-compose docker-compose-v2 docker-doc podman-docker containerd runc | cut -f1)
+    ```
 
-2.  **Set Up Repository Docker**
+2.  **Set Up Repository Docker**  
     Sebelum melakukan instalasi, Anda harus melakukan set up repository resmi Docker untuk Ubuntu. Hal ini mencakup penambahan GPG Docker dan penambahan repository Docker ke `apt`.
 
-``` bash
-# Add Docker's official GPG key:
-sudo apt update
-sudo apt install ca-certificates curl
-sudo install -m 0755 -d /etc/apt/keyrings
-sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg   -o /etc/apt/keyrings/docker.asc
-sudo chmod a+r /etc/apt/keyrings/docker.asc
+    ``` bash
+    # Add Docker's official GPG key:
+    sudo apt update
+    sudo apt install ca-certificates curl
+    sudo install -m 0755 -d /etc/apt/keyrings
+    sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg   -o /etc/apt/keyrings/docker.asc
+    sudo chmod a+r /etc/apt/keyrings/docker.asc
 
-# Add the repository to Apt sources:
-sudo tee /etc/apt/sources.list.d/docker.sources <<EOF
-Types: deb
-URIs: https://download.docker.com/linux/ubuntu  
-Suites: $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}")
-Components: stable
-Signed-By: /etc/apt/keyrings/docker.asc
-EOF
+    # Add the repository to Apt sources:
+    sudo tee /etc/apt/sources.list.d/docker.sources <<EOF
+    Types: deb
+    URIs: https://download.docker.com/linux/ubuntu  
+    Suites: $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}")
+    Components: stable
+    Signed-By: /etc/apt/keyrings/docker.asc
+    EOF
 
-sudo apt update
-```
+    sudo apt update
+    ```
 
-3.  **Install Docker Packages**
+3.  **Install Docker Packages**  
     Langkah ini akan menginstal komponen-komponen Docker.
 
-``` bash
-sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-```
+    ``` bash
+    sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+    ```
 
-4.  **Cek Instalasi Docker**
+4.  **Cek Instalasi Docker**  
     Untuk mengecek instalasi, Anda dapat menjalankan perintah berikut. Perintah ini memastikan bahwa Docker diinstal secara sempurna.
 
-``` bash
-sudo docker run hello-world
-```
+    ``` bash
+    sudo docker run hello-world
+    ```
 
-5.  **Atur Permission User**
+5.  **Atur Permission User**  
     Perlu dilakukan konfigurasi tambahan untuk mengatur permission agar user biasa dapat menggunakan Docker tanpa privilege root.
 
-``` bash
-sudo groupadd docker
-sudo usermod -aG docker $USER
-```
+    ``` bash
+    sudo groupadd docker
+    sudo usermod -aG docker $USER
+    ```
 
-Anda mungkin perlu melakukan login ulang pada VM Linux Anda.
+    Anda mungkin perlu melakukan login ulang pada VM Linux Anda.
 
 ## Operasi-operasi Dasar Docker
 
-1.  **Mengambil dan Menjalankan Image dari Registry**
+1.  **Mengambil dan Menjalankan Image dari Registry**  
 
-``` bash
-docker run <nama-image>:<tag-image>
-```
+    ``` bash
+    docker run <nama-image>:<tag-image>
+    ```
 
-Contoh:
+    Contoh:
 
-``` bash
-docker run postgres:14-alpine
-```
+    ``` bash
+    docker run postgres:14-alpine
+    ```
 
-2.  **Memulai Docker Container**
+2.  **Memulai Docker Container**  
 
-``` bash
-docker start <nama-container>
-```
+    ``` bash
+    docker start <nama-container>
+    ```
 
-3.  **Menghentikan Container yang Berjalan**
+3.  **Menghentikan Container yang Berjalan**  
 
-``` bash
-docker stop <nama-container>
-```
+    ``` bash
+    docker stop <nama-container>
+    ```
 
-4.  **Melihat Container yang Berjalan**
+4.  **Melihat Container yang Berjalan**  
 
-``` bash
-docker ps
+    ``` bash
+    docker ps
 
-# atau seluruh container
-docker ps -a
-```
+    # atau seluruh container
+    docker ps -a
+    ```
 
-5.  **Menghapus Container**
+5.  **Menghapus Container**  
 
-``` bash
-docker rm <nama-container>
-```
+    ``` bash
+    docker rm <nama-container>
+    ```
 
-6.  **Melihat Semua Image**
+6.  **Melihat Semua Image**  
 
-``` bash
-docker image ls
-```
+    ``` bash
+    docker image ls
+    ```
 
-7.  **Menghapus Image**
+7.  **Menghapus Image**  
 
-``` bash
-docker image rm <nama-image>
-```
+    ``` bash
+    docker image rm <nama-image>
+    ```
 
 Untuk informasi mengenai seluruh perintah yang tersedia, Anda dapat menggunakan perintah:
 
@@ -349,143 +349,142 @@ Pada hands-on kali ini, kita akan membuat Docker image dari sebuah repository. B
 #### Instalasi Docker (Ubuntu)
 Docker memiliki dukungan resmi untuk instalasi pada Ubuntu. Berikut adalah langkah-langkah yang dapat Anda lakukan:
 
-1.  **Hapus Instalasi Docker Sebelumnya**
+1.  **Hapus Instalasi Docker Sebelumnya**  
     Langkah ini dilakukan untuk menghapus package Docker lain yang mungkin dapat menyebabkan konflik.
 
-``` bash
-sudo apt remove $(dpkg --get-selections docker.io docker-compose docker-compose-v2 docker-doc podman-docker containerd runc | cut -f1)
-```
+    ``` bash
+    sudo apt remove $(dpkg --get-selections docker.io docker-compose docker-compose-v2 docker-doc podman-docker containerd runc | cut -f1)
+    ```
 
-2.  **Set Up Repository Docker**
+2.  **Set Up Repository Docker**  
     Sebelum melakukan instalasi, Anda harus melakukan set up repository resmi Docker untuk Ubuntu. Hal ini mencakup penambahan GPG Docker dan penambahan repository Docker ke `apt`.
 
-``` bash
-# Add Docker's official GPG key:
-sudo apt update
-sudo apt install ca-certificates curl
-sudo install -m 0755 -d /etc/apt/keyrings
-sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg   -o /etc/apt/keyrings/docker.asc
-sudo chmod a+r /etc/apt/keyrings/docker.asc
+    ``` bash
+    # Add Docker's official GPG key:
+    sudo apt update
+    sudo apt install ca-certificates curl
+    sudo install -m 0755 -d /etc/apt/keyrings
+    sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg   -o /etc/apt/keyrings/docker.asc
+    sudo chmod a+r /etc/apt/keyrings/docker.asc
 
-# Add the repository to Apt sources:
-sudo tee /etc/apt/sources.list.d/docker.sources <<EOF
-Types: deb
-URIs: https://download.docker.com/linux/ubuntu  
-Suites: $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}")
-Components: stable
-Signed-By: /etc/apt/keyrings/docker.asc
-EOF
+    # Add the repository to Apt sources:
+    sudo tee /etc/apt/sources.list.d/docker.sources <<EOF
+    Types: deb
+    URIs: https://download.docker.com/linux/ubuntu  
+    Suites: $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}")
+    Components: stable
+    Signed-By: /etc/apt/keyrings/docker.asc
+    EOF
 
-sudo apt update
-```
+    sudo apt update
+    ```
 
-3.  **Install Docker Packages**
+3.  **Install Docker Packages**  
     Langkah ini akan menginstal komponen-komponen Docker.
 
-``` bash
-sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-```
+    ``` bash
+    sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+    ```
 
-4.  **Cek Instalasi Docker**
+4.  **Cek Instalasi Docker**  
     Untuk mengecek instalasi, Anda dapat menjalankan perintah berikut. Perintah ini memastikan bahwa Docker diinstal secara sempurna.
 
-``` bash
-sudo docker run hello-world
-```
+    ``` bash
+    sudo docker run hello-world
+    ```
 
-5.  **Atur Permission User**
+5.  **Atur Permission User**  
     Perlu dilakukan konfigurasi tambahan untuk mengatur permission agar user biasa dapat menggunakan Docker tanpa privilege root.
 
-``` bash
-sudo groupadd docker
-sudo usermod -aG docker $USER
-```
+    ``` bash
+    sudo groupadd docker
+    sudo usermod -aG docker $USER
+    ```
 
-Anda mungkin perlu melakukan login ulang pada VM Linux Anda.
+    Anda mungkin perlu melakukan login ulang pada VM Linux Anda.
 #### Membuat Image Baru
 
-1.  **Kloning Repository Proyek**
+1.  **Kloning Repository Proyek**  
     Unduh repository yang akan digunakan dengan menggunakan Git. Jika belum terinstal, jalankan perintah:
 
-<!-- -->
+    <!-- -->
+        sudo apt-get install -y git
 
-    sudo apt-get install -y git
+    Jika sudah terinstal, lakukan cloning repository.
 
-Jika sudah terinstal, lakukan cloning repository.
+    ``` bash
+    git clone https://github.com/kinsta/hello-world-nextjs.git  
+    cd hello-world-nextjs
+    ```
 
-``` bash
-git clone https://github.com/kinsta/hello-world-nextjs.git  
-cd hello-world-nextjs
-```
-
-2.  **Buat Dockerfile**
+2.  **Buat Dockerfile**  
     Dalam direktori proyek tersebut, buat file baru bernama `Dockerfile`.
 
-``` bash
-touch Dockerfile
-```
+    ``` bash
+    touch Dockerfile
+    ```
 
-Lalu tulis instruksi sesuai dengan isi file di bawah. Anda dapat menggunakan teks editor pilihan Anda.
+    Lalu tulis instruksi sesuai dengan isi file di bawah. Anda dapat menggunakan teks editor pilihan Anda.
 
-``` dockerfile
-# Stage 1: Install dependencies dan build aplikasi
-# Menggunakan Node.js 18 dengan Alpine Linux sebagai base image agar ukuran image lebih kecil
-FROM node:18-alpine AS builder
+    ``` dockerfile
+    # Stage 1: Install dependencies dan build aplikasi
+    # Menggunakan Node.js 18 dengan Alpine Linux sebagai base image agar ukuran image lebih kecil
+    FROM node:18-alpine AS builder
 
-# Menetapkan direktori kerja di dalam container
-WORKDIR /app
+    # Menetapkan direktori kerja di dalam container
+    WORKDIR /app
 
-# Menyalin file package.json dan package-lock.json untuk install dependencies
-COPY package.json package-lock.json* ./
+    # Menyalin file package.json dan package-lock.json untuk install dependencies
+    COPY package.json package-lock.json* ./
 
-# Menginstall dependencies berdasarkan lockfile agar hasil konsisten
-RUN npm ci
+    # Menginstall dependencies berdasarkan lockfile agar hasil konsisten
+    RUN npm ci
 
-# Menyalin seluruh source code proyek ke dalam container
-COPY . .
+    # Menyalin seluruh source code proyek ke dalam container
+    COPY . .
 
-# Menjalankan build Next.js yang menghasilkan static export ke folder out/
-RUN npm run build
+    # Menjalankan build Next.js yang menghasilkan static export ke folder out/
+    RUN npm run build
 
-# Stage 2: Menyajikan file statis menggunakan nginx
-# Menggunakan nginx Alpine sebagai web server yang ringan
-FROM nginx:alpine
+    # Stage 2: Menyajikan file statis menggunakan nginx
+    # Menggunakan nginx Alpine sebagai web server yang ringan
+    FROM nginx:alpine
 
-# Menyalin hasil build (folder out/) dari stage builder ke direktori default nginx
-COPY --from=builder /app/out /usr/share/nginx/html
+    # Menyalin hasil build (folder out/) dari stage builder ke direktori default nginx
+    COPY --from=builder /app/out /usr/share/nginx/html
 
-# Mengekspos port 80 agar container dapat diakses dari luar
-EXPOSE 80
+    # Mengekspos port 80 agar container dapat diakses dari luar
+    EXPOSE 80
 
-# Menjalankan nginx di foreground agar container tetap hidup
-CMD ["nginx", "-g", "daemon off;"]
-```
+    # Menjalankan nginx di foreground agar container tetap hidup
+    CMD ["nginx", "-g", "daemon off;"]
+    ```
 
-3.  **Buat .dockerignore**
+3.  **Buat .dockerignore**  
     Dalam direktori proyek tersebut, buat file baru bernama `.dockerignore`.
 
-``` bash
-touch .dockerignore
-```
+    ``` bash
+    touch .dockerignore
+    ```
 
-Lalu tulis file/direktori yang ingin diabaikan oleh Docker. Anda dapat menggunakan teks editor pilihan Anda.
+    Lalu tulis file/direktori yang ingin diabaikan oleh Docker. Anda dapat menggunakan teks editor pilihan Anda.
 
-``` .dockerignore
-node_modules
-out
-.next
-.git
-Dockerfile
-.dockerignore
-README.md
-```
+    ``` .dockerignore
+    node_modules
+    out
+    .next
+    .git
+    Dockerfile
+    .dockerignore
+    README.md
+    ```
 
-4.  **Jalankan Docker Build**
+4.  **Jalankan Docker Build**  
     Jalankan Docker Build untuk membuat image sesuai dengan Dockerfile yang telah Anda tulis, tunggu hingga selesai.
 
-``` bash
-docker build -t hello-world-nextjs .
-```
+    ``` bash
+    docker build -t hello-world-nextjs .
+    ```
 
 ### Verifikasi Keberhasilan Hands-on
 
@@ -535,14 +534,14 @@ configs:     # Mendefinisikan konfigurasi eksternal yang digunakan service
 
 Sebelum memahami struktur file Compose lebih lanjut, penting untuk memahami beberapa aturan dasar penulisan YAML yang digunakan dalam file Compose.
 
-**Pasangan Key-Value**
+**Pasangan Key-Value**  
 Setiap konfigurasi ditulis dalam bentuk pasangan *key-value* yang dipisahkan oleh tanda titik dua (`:`):
 
 ``` yaml
 nama_kunci: nilai
 ```
 
-**Indentasi**
+**Indentasi**  
 YAML menggunakan **indentasi spasi** (bukan tab) untuk menunjukkan hierarki atau hubungan antar elemen. Umumnya digunakan kelipatan **2 spasi** untuk setiap tingkat indentasi:
 
 ``` yaml
@@ -551,7 +550,7 @@ services:
     image: nginx    # Tingkat 2 (4 spasi)
 ```
 
-**Daftar (List)**
+**Daftar (List)**  
 Daftar atau array ditulis menggunakan tanda hubung (`-`) di awal setiap elemen:
 
 ``` yaml
@@ -560,7 +559,7 @@ ports:
   - "443:443"
 ```
 
-**Komentar**
+**Komentar**  
 Komentar diawali dengan tanda pagar (`#`) dan akan diabaikan oleh Docker Compose:
 
 ``` yaml
@@ -728,62 +727,62 @@ secrets:
 
 Berikut adalah perintah-perintah dasar yang umum digunakan dalam pengelolaan aplikasi dengan Docker Compose:
 
-1.  **Menjalankan Aplikasi**
+1.  **Menjalankan Aplikasi**  
     Perintah ini akan membangun, membuat, dan memulai semua container yang didefinisikan dalam file Compose.
 
-``` bash
-docker compose up
-```
+    ``` bash
+    docker compose up
+    ```
 
-Untuk menjalankan dalam mode latar belakang (*detached mode*):
+    Untuk menjalankan dalam mode latar belakang (*detached mode*):
 
-``` bash
-docker compose up -d
-```
+    ``` bash
+    docker compose up -d
+    ```
 
-2.  **Menghentikan Aplikasi**
+2.  **Menghentikan Aplikasi**  
     Perintah ini akan menghentikan dan menghapus container yang dibuat oleh Compose.
 
-``` bash
-docker compose down
-```
+    ``` bash
+    docker compose down
+    ```
 
-3.  **Melihat Status Service**
+3.  **Melihat Status Service**  
     Menampilkan status dari semua service yang dikelola oleh Compose.
 
-``` bash
-docker compose ps
-```
+    ``` bash
+    docker compose ps
+    ```
 
-4.  **Melihat Log Service**
+4.  **Melihat Log Service**  
     Menampilkan log dari service yang sedang berjalan.
 
-``` bash
-docker compose logs
-# atau untuk service tertentu
-docker compose logs <nama_service>
-```
+    ``` bash
+    docker compose logs
+    # atau untuk service tertentu
+    docker compose logs <nama_service>
+    ```
 
-5.  **Membangun Ulang Image**
+5.  **Membangun Ulang Image**  
     Membangun atau membangun ulang image untuk service yang didefinisikan.
 
-``` bash
-docker compose build
-```
+    ``` bash
+    docker compose build
+    ```
 
-6.  **Menjalankan Perintah dalam Service**
+6.  **Menjalankan Perintah dalam Service**  
     Menjalankan perintah tertentu di dalam container dari sebuah service.
 
-``` bash
-docker compose exec <nama_service> <perintah>
-```
+    ``` bash
+    docker compose exec <nama_service> <perintah>
+    ```
 
-7.  **Melihat Konfigurasi yang Dihasilkan**
+7.  **Melihat Konfigurasi yang Dihasilkan**  
     Menampilkan konfigurasi YAML yang telah diproses oleh Docker Compose.
 
-``` bash
-docker compose config
-```
+    ``` bash
+    docker compose config
+    ```
 
 ### Menjalankan Service berdasarkan File Compose
 
@@ -797,60 +796,60 @@ End Goal:
 Kumpulan Service docker yang diorkestrasi oleh docker compose.
 ### Langkah-langkah Hands-on
 Pada hands on kali ini, kita akan membuat sebuah compose yang terdiri dari dua layanan, yaitu image yang baru kita buat pada hands on sebelumnya, dan proxy nginx. Berikut adalah langkah-langkah yang harus dilakukan.
-1. Masuk ke Direktori Proyek Sebelumnya
-Masuk ke direktori proyek yang telah anda buat image nya pada hands on sebelumnya.
+1. **Masuk ke Direktori Proyek Sebelumnya**  
+    Masuk ke direktori proyek yang telah anda buat image nya pada hands on sebelumnya.
 
-``` bash
-cd hello-world-nextjs
-```
+    ``` bash
+    cd hello-world-nextjs
+    ```
 
-2.  Buat File Compose
+2.  **Buat File Compose**  
     Buat file baru bernama `compose.yaml` dalam direktori proyek anda saat ini
 
-``` bash
-touch compose.yaml
-```
+    ``` bash
+    touch compose.yaml
+    ```
 
-Lalu tulis isi file compose sesuai dengan petunjuk dibawah ini:
+    Lalu tulis isi file compose sesuai dengan petunjuk dibawah ini:
 
-``` yaml
-# Definisi semua service yang akan dijalankan
-services:
+    ``` yaml
+    # Definisi semua service yang akan dijalankan
+    services:
 
-  # Service 1: Aplikasi Next.js (static site) yang di-serve oleh nginx internal
-  app:
-    # Build image dari Dockerfile di direktori saat ini
-    build: .
-    # Restart otomatis kecuali container dihentikan secara manual
-    restart: unless-stopped
+      # Service 1: Aplikasi Next.js (static site) yang di-serve oleh nginx internal
+      app:
+        # Build image dari Dockerfile di direktori saat ini
+        build: .
+        # Restart otomatis kecuali container dihentikan secara manual
+        restart: unless-stopped
 
-  # Service 2: Nginx reverse proxy sebagai entry point utama
-  proxy:
-    # Menggunakan image nginx versi Alpine yang ringan
-    image: nginx:alpine
-    # Mapping port 3000 di host ke port 80 di container
-    ports:
-      - "3000:80"
-    # Mount file konfigurasi nginx dari host ke container (read-only, dengan label SELinux)
-    volumes:
-      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro,z
-    # Pastikan service app sudah berjalan sebelum proxy dimulai
-    depends_on:
-      - app
-    # Restart otomatis kecuali container dihentikan secara manual
-    restart: unless-stopped
-```
+      # Service 2: Nginx reverse proxy sebagai entry point utama
+      proxy:
+        # Menggunakan image nginx versi Alpine yang ringan
+        image: nginx:alpine
+        # Mapping port 3000 di host ke port 80 di container
+        ports:
+          - "3000:80"
+        # Mount file konfigurasi nginx dari host ke container (read-only, dengan label SELinux)
+        volumes:
+          - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro,z
+        # Pastikan service app sudah berjalan sebelum proxy dimulai
+        depends_on:
+          - app
+        # Restart otomatis kecuali container dihentikan secara manual
+        restart: unless-stopped
+    ```
 
-1.  Jalankan Compose
+3.  **Jalankan Compose**  
     Jalankan compose dengan menjalankan perintah berikut
 
-``` bash
-docker compose up -d --build
-```
+    ``` bash
+    docker compose up -d --build
+    ```
 
-<img
-src="Docker%20dan%20Docker%20Compose-media/095153d71faa716a67f13e04f54beaeae7bbd815.png"
-class="wikilink" alt="Pastedimage20260301081908.png" />
+    <img
+    src="Docker%20dan%20Docker%20Compose-media/095153d71faa716a67f13e04f54beaeae7bbd815.png"
+    class="wikilink" alt="Pastedimage20260301081908.png" />
 ### Verifikasi Keberhasilan Hands-on
 Untuk memverifikasi bahwa seluruh service telah berjalan, jalankan perintah berikut:
 
