@@ -494,7 +494,8 @@ Sebagai verifikasi bahwa image Anda berhasil dibuat, jalankan perintah di bawah 
 docker run -d -p 3000:80 --name hello-nextjs hello-world-nextjs
 ```
 
-Buka http://localhost:3000 pada browser Anda, Anda seharusnya akan mendapatkan tampilan seperti ini.<img
+Buka http://localhost:3000 pada browser Anda, Anda seharusnya akan mendapatkan tampilan seperti ini.  
+<img
 src="Docker%20dan%20Docker%20Compose-media/7674faf1afad7b6277c84a5ad006956722e54919.png"
 class="wikilink" alt="Pastedimage20260301074459.png" />
 
